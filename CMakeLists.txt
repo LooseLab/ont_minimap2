@@ -19,7 +19,7 @@ if (NOT EXISTS ${CMAKE_SOURCE_DIR}/clone)
 	exec_program(
 	    "${GIT_EXECUTABLE}"
 	    ${CMAKE_SOURCE_DIR}
-	    ARGS "clone https://github.com/lh3/minimap2.git clone"
+	    ARGS "clone https://github.com/Looselabrepos/minimap2 clone"
 	)
 endif()
 
