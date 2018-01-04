@@ -81,7 +81,9 @@ add_library(libminimap2
 	clone/chain.c
 	clone/align.c
 	clone/hit.c
+	clone/pe.c
 	clone/map.c
+	clone/esterr.c
 	clone/format.c
 )
 
