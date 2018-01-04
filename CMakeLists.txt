@@ -26,7 +26,7 @@ endif()
 exec_program(
     "${GIT_EXECUTABLE}"
     ${CMAKE_SOURCE_DIR}/clone
-    ARGS "checkout v2.1.1"
+    ARGS "checkout"
 )
 file(COPY
 	clone/minimap.h
@@ -120,7 +120,7 @@ target_link_libraries(ont_minimap2
 )
 
 # suppress all warnings (DISABLE THIS DURING DEVELOPMENT!)
-set(CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS} -w")
+set(CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS} arm_neon=1 -w")
 
 if(WIN32)
 	add_definitions(-DHAVE_STRUCT_TIMESPEC)
