@@ -69,6 +69,7 @@ add_library(libminimap2
 	clone/getopt.c
 	clone/kthread.c
 	clone/kalloc.c
+	clone/ksw2_dispatch.c
 	clone/ksw2_extz2_sse.c
 	clone/ksw2_extd2_sse.c
 	clone/ksw2_exts2_sse.c
@@ -85,6 +86,7 @@ add_library(libminimap2
 	clone/map.c
 	clone/esterr.c
 	clone/format.c
+	clone/main.c
 )
 
 add_library(ont_minimap2
@@ -122,7 +124,7 @@ target_link_libraries(ont_minimap2
 )
 
 # suppress all warnings (DISABLE THIS DURING DEVELOPMENT!)
-set(CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS} arm_neon=1 -w")
+set(CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS} -w")
 
 if(WIN32)
 	add_definitions(-DHAVE_STRUCT_TIMESPEC)
